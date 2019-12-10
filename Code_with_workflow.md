@@ -6,15 +6,15 @@
 
 Open GRASS 7.6 through OSGeo
 
-`pdal translate --input=16600_1.las --writers.las.minor_version=2 --output=16600_1_v12.las`
+`pdal translate --input=study_area_lidar_data.las --writers.las.minor_version=2 --output=study_area_lidar_data_v12.las`
 
 Open normal GRASS GIS
 
 \# Coordinate system is 2264. Convert to 3358
 
-`lasinfo soccer_field_v_12.las`
+`lasinfo study_area_lidar_data_v12.las`
 
-`las2las --a_srs=EPSG:2264 --t_srs=EPSG:3358 -i soccer_field_v_12.las -o soccer_field_v_12_3358.las`
+`las2las --a_srs=EPSG:2264 --t_srs=EPSG:3358 -i study_area_lidar_data_v12.las -o study_area_lidar_data_v12_3358.las`
 
 \# Removing noise from LAS file in **lasnoise tool.**
 
